@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F452E247192B829300916A25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452E246192B829300916A25 /* Cocoa.framework */; };
+		F452E251192B829300916A25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F452E24F192B829300916A25 /* InfoPlist.strings */; };
+		F452E253192B829300916A25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E252192B829300916A25 /* main.m */; };
+		F452E257192B829300916A25 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F452E255192B829300916A25 /* Credits.rtf */; };
+		F452E25A192B829300916A25 /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E259192B829300916A25 /* COAppDelegate.m */; };
+		F452E25D192B829300916A25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F452E25B192B829300916A25 /* MainMenu.xib */; };
+		F452E25F192B829300916A25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F452E25E192B829300916A25 /* Images.xcassets */; };
+		F452E27F192B82D400916A25 /* GRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E27C192B82D400916A25 /* GRNavigationController.m */; };
+		F452E280192B82D400916A25 /* GRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E27E192B82D400916A25 /* GRViewController.m */; };
+		F452E285192B832400916A25 /* COMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E283192B832400916A25 /* COMainWindowController.m */; };
+		F452E286192B832400916A25 /* COMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F452E284192B832400916A25 /* COMainWindowController.xib */; };
+		F452E289192B83BC00916A25 /* COCountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E288192B83BC00916A25 /* COCountriesViewController.m */; };
+		F452E28C192B83EB00916A25 /* COSingleCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E28B192B83EB00916A25 /* COSingleCountryViewController.m */; };
+		F452E28E192B8C3800916A25 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452E28D192B8C3800916A25 /* WebKit.framework */; };
+		F452E292192B92E800916A25 /* GRBarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F452E291192B92E800916A25 /* GRBarProgressView.m */; };
+		F452E296192BB84600916A25 /* countries.iconset in Resources */ = {isa = PBXBuildFile; fileRef = F452E295192BB84600916A25 /* countries.iconset */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F452E243192B829300916A25 /* Countries (demo app).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countries (demo app).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F452E246192B829300916A25 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F452E249192B829300916A25 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F452E24A192B829300916A25 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F452E24B192B829300916A25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F452E24E192B829300916A25 /* Countries (demo app)-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Countries (demo app)-Info.plist"; sourceTree = "<group>"; };
+		F452E250192B829300916A25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F452E252192B829300916A25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F452E254192B829300916A25 /* Countries (demo app)-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Countries (demo app)-Prefix.pch"; sourceTree = "<group>"; };
+		F452E256192B829300916A25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F452E258192B829300916A25 /* COAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COAppDelegate.h; sourceTree = "<group>"; };
+		F452E259192B829300916A25 /* COAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
+		F452E25C192B829300916A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F452E25E192B829300916A25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F452E265192B829300916A25 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F452E27B192B82D400916A25 /* GRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRNavigationController.h; sourceTree = "<group>"; };
+		F452E27C192B82D400916A25 /* GRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRNavigationController.m; sourceTree = "<group>"; };
+		F452E27D192B82D400916A25 /* GRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRViewController.h; sourceTree = "<group>"; };
+		F452E27E192B82D400916A25 /* GRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRViewController.m; sourceTree = "<group>"; };
+		F452E282192B832400916A25 /* COMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COMainWindowController.h; path = Controllers/COMainWindowController.h; sourceTree = "<group>"; };
+		F452E283192B832400916A25 /* COMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COMainWindowController.m; path = Controllers/COMainWindowController.m; sourceTree = "<group>"; };
+		F452E284192B832400916A25 /* COMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = COMainWindowController.xib; path = Controllers/COMainWindowController.xib; sourceTree = "<group>"; };
+		F452E287192B83BC00916A25 /* COCountriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COCountriesViewController.h; path = Controllers/COCountriesViewController.h; sourceTree = "<group>"; };
+		F452E288192B83BC00916A25 /* COCountriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COCountriesViewController.m; path = Controllers/COCountriesViewController.m; sourceTree = "<group>"; };
+		F452E28A192B83EB00916A25 /* COSingleCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COSingleCountryViewController.h; path = Controllers/COSingleCountryViewController.h; sourceTree = "<group>"; };
+		F452E28B192B83EB00916A25 /* COSingleCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COSingleCountryViewController.m; path = Controllers/COSingleCountryViewController.m; sourceTree = "<group>"; };
+		F452E28D192B8C3800916A25 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F452E290192B92E800916A25 /* GRBarProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRBarProgressView.h; path = Views/GRBarProgressView.h; sourceTree = "<group>"; };
+		F452E291192B92E800916A25 /* GRBarProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRBarProgressView.m; path = Views/GRBarProgressView.m; sourceTree = "<group>"; };
+		F452E295192BB84600916A25 /* countries.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; name = countries.iconset; path = ../countries.iconset; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F452E240192B829300916A25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F452E28E192B8C3800916A25 /* WebKit.framework in Frameworks */,
+				F452E247192B829300916A25 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F452E23A192B829300916A25 = {
+			isa = PBXGroup;
+			children = (
+				F452E27A192B82D400916A25 /* GRNavigationController */,
+				F452E24C192B829300916A25 /* Countries (demo app) */,
+				F452E245192B829300916A25 /* Frameworks */,
+				F452E244192B829300916A25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F452E244192B829300916A25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F452E243192B829300916A25 /* Countries (demo app).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F452E245192B829300916A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F452E28D192B8C3800916A25 /* WebKit.framework */,
+				F452E246192B829300916A25 /* Cocoa.framework */,
+				F452E265192B829300916A25 /* XCTest.framework */,
+				F452E248192B829300916A25 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F452E248192B829300916A25 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F452E249192B829300916A25 /* AppKit.framework */,
+				F452E24A192B829300916A25 /* CoreData.framework */,
+				F452E24B192B829300916A25 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F452E24C192B829300916A25 /* Countries (demo app) */ = {
+			isa = PBXGroup;
+			children = (
+				F452E28F192B92CC00916A25 /* Views */,
+				F452E281192B830B00916A25 /* Controllers */,
+				F452E258192B829300916A25 /* COAppDelegate.h */,
+				F452E259192B829300916A25 /* COAppDelegate.m */,
+				F452E25B192B829300916A25 /* MainMenu.xib */,
+				F452E25E192B829300916A25 /* Images.xcassets */,
+				F452E24D192B829300916A25 /* Supporting Files */,
+			);
+			path = "Countries (demo app)";
+			sourceTree = "<group>";
+		};
+		F452E24D192B829300916A25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F452E295192BB84600916A25 /* countries.iconset */,
+				F452E24E192B829300916A25 /* Countries (demo app)-Info.plist */,
+				F452E24F192B829300916A25 /* InfoPlist.strings */,
+				F452E252192B829300916A25 /* main.m */,
+				F452E254192B829300916A25 /* Countries (demo app)-Prefix.pch */,
+				F452E255192B829300916A25 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F452E27A192B82D400916A25 /* GRNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F452E27B192B82D400916A25 /* GRNavigationController.h */,
+				F452E27C192B82D400916A25 /* GRNavigationController.m */,
+				F452E27D192B82D400916A25 /* GRViewController.h */,
+				F452E27E192B82D400916A25 /* GRViewController.m */,
+			);
+			name = GRNavigationController;
+			path = ../GRNavigationController;
+			sourceTree = "<group>";
+		};
+		F452E281192B830B00916A25 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F452E282192B832400916A25 /* COMainWindowController.h */,
+				F452E283192B832400916A25 /* COMainWindowController.m */,
+				F452E284192B832400916A25 /* COMainWindowController.xib */,
+				F452E287192B83BC00916A25 /* COCountriesViewController.h */,
+				F452E288192B83BC00916A25 /* COCountriesViewController.m */,
+				F452E28A192B83EB00916A25 /* COSingleCountryViewController.h */,
+				F452E28B192B83EB00916A25 /* COSingleCountryViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F452E28F192B92CC00916A25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F452E290192B92E800916A25 /* GRBarProgressView.h */,
+				F452E291192B92E800916A25 /* GRBarProgressView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F452E242192B829300916A25 /* Countries (demo app) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F452E274192B829300916A25 /* Build configuration list for PBXNativeTarget "Countries (demo app)" */;
+			buildPhases = (
+				F452E23F192B829300916A25 /* Sources */,
+				F452E240192B829300916A25 /* Frameworks */,
+				F452E241192B829300916A25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Countries (demo app)";
+			productName = "Countries (demo app)";
+			productReference = F452E243192B829300916A25 /* Countries (demo app).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F452E23B192B829300916A25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CO;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Guilherme Rambo";
+			};
+			buildConfigurationList = F452E23E192B829300916A25 /* Build configuration list for PBXProject "Countries (demo app)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F452E23A192B829300916A25;
+			productRefGroup = F452E244192B829300916A25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F452E242192B829300916A25 /* Countries (demo app) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F452E241192B829300916A25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F452E251192B829300916A25 /* InfoPlist.strings in Resources */,
+				F452E25F192B829300916A25 /* Images.xcassets in Resources */,
+				F452E257192B829300916A25 /* Credits.rtf in Resources */,
+				F452E286192B832400916A25 /* COMainWindowController.xib in Resources */,
+				F452E296192BB84600916A25 /* countries.iconset in Resources */,
+				F452E25D192B829300916A25 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F452E23F192B829300916A25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F452E27F192B82D400916A25 /* GRNavigationController.m in Sources */,
+				F452E289192B83BC00916A25 /* COCountriesViewController.m in Sources */,
+				F452E28C192B83EB00916A25 /* COSingleCountryViewController.m in Sources */,
+				F452E280192B82D400916A25 /* GRViewController.m in Sources */,
+				F452E25A192B829300916A25 /* COAppDelegate.m in Sources */,
+				F452E292192B92E800916A25 /* GRBarProgressView.m in Sources */,
+				F452E253192B829300916A25 /* main.m in Sources */,
+				F452E285192B832400916A25 /* COMainWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F452E24F192B829300916A25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F452E250192B829300916A25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F452E255192B829300916A25 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F452E256192B829300916A25 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F452E25B192B829300916A25 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F452E25C192B829300916A25 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F452E272192B829300916A25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F452E273192B829300916A25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F452E275192B829300916A25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Countries (demo app)/Countries (demo app)-Prefix.pch";
+				INFOPLIST_FILE = "Countries (demo app)/Countries (demo app)-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F452E276192B829300916A25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Countries (demo app)/Countries (demo app)-Prefix.pch";
+				INFOPLIST_FILE = "Countries (demo app)/Countries (demo app)-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F452E23E192B829300916A25 /* Build configuration list for PBXProject "Countries (demo app)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F452E272192B829300916A25 /* Debug */,
+				F452E273192B829300916A25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F452E274192B829300916A25 /* Build configuration list for PBXNativeTarget "Countries (demo app)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F452E275192B829300916A25 /* Debug */,
+				F452E276192B829300916A25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F452E23B192B829300916A25 /* Project object */;
+}

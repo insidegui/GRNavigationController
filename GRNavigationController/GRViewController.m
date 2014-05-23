@@ -46,7 +46,7 @@
 
 @implementation GRViewController (Private)
 
-- (void)_setNavigationController:(GRNavigationController *)controller
+- (void)setNavigationController:(GRNavigationController *)controller
 {
     _navigationController = controller;
 }

@@ -9,15 +9,14 @@
 #import "GRNavigationController.h"
 #import "GRViewController.h"
 
-// the directions used for navigation
-typedef enum : NSInteger {
+typedef NS_ENUM(NSInteger, GRNavigationDirection) {
     GRNavigationDirectionBack = -1,
     GRNavigationDirectionForward = 1
-} GRNavigationDirection;
+};
 
 // this is a private method the navigation controller uses to set itself on the view controller
 @interface GRViewController (Private)
-- (void)_setNavigationController:(GRNavigationController *)controller;
+- (void)setNavigationController:(GRNavigationController *)controller;
 @end
 
 @implementation GRNavigationController
@@ -35,9 +34,9 @@ typedef enum : NSInteger {
         self.view.animations = @{@"subviews": self.transition};
     }
     
-    [self _reallyPushViewController:viewController animated:animated];
+    [self reallyPushViewController:viewController animated:animated];
     
-    [self _updateBackButtonTitle];
+    [self updateBackButtonTitle];
 }
 
 - (void)pushViewController:(GRViewController *)viewController usingTransition:(CATransition *)transition withTransactionBlock:(void (^)())transactionBlock
@@ -51,13 +50,13 @@ typedef enum : NSInteger {
     if (transactionBlock) {
         [CATransaction begin];
         transactionBlock();
-        [self _reallyPushViewController:viewController animated:YES];
+        [self reallyPushViewController:viewController animated:YES];
         [CATransaction commit];
     } else {
-        [self _reallyPushViewController:viewController animated:YES];
+        [self reallyPushViewController:viewController animated:YES];
     }
     
-    [self _updateBackButtonTitle];
+    [self updateBackButtonTitle];
 }
 
 - (void)popViewControllerAnimated:(BOOL)animated
@@ -74,16 +73,16 @@ typedef enum : NSInteger {
         self.view.animations = @{@"subviews": [NSNull null]};
     }
     
-    GRViewController *previousViewController = [self _previousViewController];
-    GRViewController *currentViewController = [self _currentViewController];
+    GRViewController *previousViewController = [self previousViewController];
+    GRViewController *currentViewController = [self currentViewController];
     
-    [self _replaceViewController:currentViewController withViewController:previousViewController animated:animated direction:GRNavigationDirectionBack];
+    [self replaceViewController:currentViewController withViewController:previousViewController animated:animated direction:GRNavigationDirectionBack];
     
-    [self _updateWindowTitleWithViewController:previousViewController];
+    [self updateWindowTitleWithViewController:previousViewController];
     
-    [self _removeViewController:[self _currentViewController]];
+    [self removeViewController:[self currentViewController]];
     
-    [self _updateBackButtonTitle];
+    [self updateBackButtonTitle];
 }
 
 - (NSArray *)viewControllers
@@ -133,10 +132,10 @@ typedef enum : NSInteger {
     self.view.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
     self.resizeChildren = YES;
     
-    if (self.rootViewController) [self _setupRootViewController];
+    if (self.rootViewController) [self setupRootViewController];
 }
 
-- (void)_setupRootViewController
+- (void)setupRootViewController
 {
     [self.rootViewController viewWillAppear:NO];
     
@@ -146,59 +145,59 @@ typedef enum : NSInteger {
     }
 
     [self.view addSubview:self.rootViewController.view];
-    [self _updateWindowTitleWithViewController:self.rootViewController];
-    [self _addViewController:self.rootViewController];
+    [self updateWindowTitleWithViewController:self.rootViewController];
+    [self addViewController:self.rootViewController];
     
     [self.rootViewController viewDidAppear:NO];
 }
 
-- (void)_addViewController:(GRViewController *)viewController
+- (void)addViewController:(GRViewController *)viewController
 {
     NSMutableArray *mutableViewControllers = [self.viewControllers mutableCopy];
     [mutableViewControllers addObject:viewController];
     _viewControllers = [mutableViewControllers copy];
     
-    [viewController _setNavigationController:self];
+    [viewController setNavigationController:self];
 }
 
-- (void)_removeViewController:(GRViewController *)viewController
+- (void)removeViewController:(GRViewController *)viewController
 {
     NSMutableArray *mutableViewControllers = [self.viewControllers mutableCopy];
     [mutableViewControllers removeObject:viewController];
     _viewControllers = [mutableViewControllers copy];
     
-    [viewController _setNavigationController:nil];
+    [viewController setNavigationController:nil];
 }
 
-- (void)_updateWindowTitleWithViewController:(GRViewController *)viewController
+- (void)updateWindowTitleWithViewController:(GRViewController *)viewController
 {
     if (viewController.title) self.view.window.title = viewController.title;
 }
 
-- (GRViewController *)_currentViewController
+- (GRViewController *)currentViewController
 {
     return self.viewControllers[self.viewControllers.count-1];
 }
 
-- (GRViewController *)_previousViewController
+- (GRViewController *)previousViewController
 {
-    if ([self _currentViewController] == self.rootViewController) return nil;
+    if ([self currentViewController] == self.rootViewController) return nil;
     
     return self.viewControllers[self.viewControllers.count-2];
 }
 
-- (void)_reallyPushViewController:(GRViewController *)viewController animated:(BOOL)animated
+- (void)reallyPushViewController:(GRViewController *)viewController animated:(BOOL)animated
 {
-    GRViewController *currentVC = [self _currentViewController];
+    GRViewController *currentVC = [self currentViewController];
     
-    [self _replaceViewController:currentVC withViewController:viewController animated:animated direction:GRNavigationDirectionForward];
+    [self replaceViewController:currentVC withViewController:viewController animated:animated direction:GRNavigationDirectionForward];
     
-    [self _updateWindowTitleWithViewController:viewController];
+    [self updateWindowTitleWithViewController:viewController];
     
-    [self _addViewController:viewController];
+    [self addViewController:viewController];
 }
 
-- (void)_replaceViewController:(GRViewController *)outController withViewController:(GRViewController *)inController animated:(BOOL)animated direction:(GRNavigationDirection)direction
+- (void)replaceViewController:(GRViewController *)outController withViewController:(GRViewController *)inController animated:(BOOL)animated direction:(GRNavigationDirection)direction
 {
     if (self.resizeChildren) {
         inController.view.frame = self.view.frame;
@@ -258,9 +257,9 @@ typedef enum : NSInteger {
  Tries to set the back button title to the view controller
  it's going to pop to, works with NSButton and NSSegmentedControll
  */
-- (void)_updateBackButtonTitle
+- (void)updateBackButtonTitle
 {
-    NSString *title = [self _previousViewController].title;
+    NSString *title = [self previousViewController].title;
     if (!title) return;
     
     if ([self.backButton respondsToSelector:@selector(setTitle:)]) {

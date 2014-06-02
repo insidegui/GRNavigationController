@@ -1,3 +1,7 @@
+#Warning: Obsolete!
+
+With the new OS X Yosemite APIs launched at WWDC 2014 this class has become obsolete, you can still use It to support older versions of the OS but I recommend using Apple's standard APIs from now on.
+
 #GRNavigationController
 
 Simple navigation controller, provides navigation to a stack of view controllers.

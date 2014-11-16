@@ -1,6 +1,6 @@
-#Warning: Obsolete!
+#If you're using storyboards...
 
-With the new OS X Yosemite APIs launched at WWDC 2014 this class has become obsolete, you can still use It to support older versions of the OS but I recommend using Apple's standard APIs from now on.
+__If you're targeting OS X 10.10 and later (and using storyboards)__, you can use a custom NSStoryboardSegue to transition between view controllers. [GRPushSegue](https://github.com/insidegui/GRPushSegue) implements this.
 
 #GRNavigationController
 

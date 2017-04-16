@@ -1,18 +1,18 @@
-#If you're using storyboards...
+# If you're using storyboards...
 
 __If you're targeting OS X 10.10 and later (and using storyboards)__, you can use a custom NSStoryboardSegue to transition between view controllers. [GRPushSegue](https://github.com/insidegui/GRPushSegue) implements this.
 
-#GRNavigationController
+# GRNavigationController
 
 Simple navigation controller, provides navigation to a stack of view controllers.
 
 ![screenshot](https://raw.github.com/insidegui/GRNavigationController/master/navigation_demo.gif)
 
-##Usage
+## Usage
 
 Note: your view controllers must subclass GRViewController
 
-###Setup
+### Setup
 
 I recommend setting everything up in IB.
 
@@ -31,24 +31,24 @@ Here's what you must hook up:
 
 	An outlet to the button to use as the "back" button, this can be any subclass of NSControl (preferably NSButton or NSSegmentedControl).
 
-###Pushing a view controller
+### Pushing a view controller
 
 	// inside a subclass of GRViewController
 	[self.navigationController pushViewController:self.myOtherVC animated:YES]
 
-###Popping the front view controller
+### Popping the front view controller
 
 
 	// inside a subclass of GRViewController
 	[self.navigationController popViewControllerAnimated:YES]
 
-##GRViewController
+## GRViewController
 
 GRViewController is an abstract class, subclassed from NSViewController, which can be used inside GRNavigationControllers.
 
 You use It just like a regular NSViewController but there are some additional methods you can override to control it's behavior on the navigation stack.
 
-###Using a custom rewind transition
+### Using a custom rewind transition
 
 If you want your view controller to be popped using a specific transition, you can set It's rewindTransition property to a custom CATransition.
 
@@ -62,7 +62,7 @@ If you want your view controller to be popped using a specific transition, you c
 	// pop
 	[self.navigationController popViewControllerAnimated:YES];
 
-###Subclassing
+### Subclassing
 
 There are 5 methods you can override to work with the navigation:
 
@@ -89,15 +89,15 @@ There are 5 methods you can override to work with the navigation:
 **Note:**
 _viewWillAppear_ and _viewWillDisappear_ occur inside a CATransaction, therefore any animations will be grouped with the navigation animation.
 
-##Sample App: Countries
+## Sample App: Countries
 
 See the included sample app "Countries" for a complete example of how to use the navigation controller.
 
-##Caveat
+## Caveat
 
 The superview of the navigation controller's view must be layer backed, which means anything inside the navigation must work in layer backed mode.
 
-##Contributing
+## Contributing
 
 You can contribute with code, just send me a pull request, or open an issue for any bug/enhancement.
 
